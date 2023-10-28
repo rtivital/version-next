@@ -1,6 +1,6 @@
 {
-  "name": "@rtivital/ts-package-template",
-  "description": "A template for TypeScript packages",
+  "name": "version-next",
+  "description": "Get next semantic version",
   "packageManager": "yarn@4.0.0",
   "version": "0.0.0",
   "type": "module",
@@ -15,12 +15,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rtivital/ts-package-template.git"
+    "url": "git+https://github.com/rtivital/version-next.git"
   },
   "bugs": {
-    "url": "https://github.com/rtivital/ts-package-template/issues"
+    "url": "https://github.com/rtivital/version-next/issues"
   },
-  "homepage": "https://github.com/rtivital/ts-package-template#readme",
+  "homepage": "https://github.com/rtivital/version-next#readme",
   "main": "./dist/cjs/index.js",
   "types": "./dist/types/index.d.ts",
   "module": "./dist/esm/index.mjs",
@@ -43,6 +43,7 @@
     "prettier:check": "prettier --check \"**/*.{ts,tsx}\"",
     "prettier:write": "prettier --write \"**/*.{ts,tsx}\"",
     "typecheck": "tsc --noEmit",
+    "jest": "jest",
     "lint": "eslint --cache --ext .ts,.tsx .",
     "test": "npm run prettier:check && npm run typecheck && npm run lint"
   },
@@ -51,6 +52,7 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-replace": "^5.0.4",
     "@types/fs-extra": "^11",
+    "@types/jest": "^29.5.6",
     "@types/node": "^20.8.9",
     "@typescript-eslint/eslint-plugin": "^6.9.0",
     "@typescript-eslint/parser": "^6.9.0",
@@ -59,11 +61,13 @@
     "esno": "^0.17.0",
     "execa": "^8.0.1",
     "fs-extra": "^11.1.1",
+    "jest": "^29.7.0",
     "prettier": "^3.0.3",
     "rimraf": "^5.0.5",
     "rollup": "^4.1.4",
     "rollup-plugin-esbuild": "^6.1.0",
     "rollup-plugin-node-externals": "^6.1.2",
+    "ts-jest": "^29.1.1",
     "typescript": "^5.2.2"
   }
 }

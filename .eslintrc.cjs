@@ -7,4 +7,7 @@ module.exports = {
   parserOptions: {
     project: './tsconfig.eslint.json',
   },
+  rules: {
+    '@typescript-eslint/ban-types': 'off',
+  },
 };
