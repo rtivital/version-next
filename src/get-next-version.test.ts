@@ -61,4 +61,11 @@ describe('getNextVersion', () => {
     expect(getNextVersion('2.0.0-alpha.0', { type: 'major', stage: 'beta' })).toBe('2.0.0-beta.0');
     expect(getNextVersion('2.0.0-alpha.3', { type: 'major', stage: 'rc' })).toBe('2.0.0-rc.0');
   });
+
+  it('performs correct stage -> regular version transition', () => {
+    expect(getNextVersion('1.1.2-alpha.0', { type: 'patch' })).toBe('1.1.2');
+    expect(getNextVersion('1.2.0-alpha.0', { type: 'minor' })).toBe('1.2.0');
+    expect(getNextVersion('1.2.0-alpha.0')).toBe('1.2.0');
+    expect(getNextVersion('2.0.0-alpha.0', { type: 'major' })).toBe('2.0.0');
+  });
 });
