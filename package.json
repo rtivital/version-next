@@ -2,7 +2,7 @@
   "name": "version-next",
   "description": "Get next semantic version",
   "packageManager": "yarn@4.0.0",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "type": "module",
   "author": "Vitaly Rtishchev <rtivital@gmail.com>",
   "engines": {
@@ -45,7 +45,8 @@
     "typecheck": "tsc --noEmit",
     "jest": "jest",
     "lint": "eslint --cache --ext .ts,.tsx .",
-    "test": "npm run prettier:check && npm run typecheck && npm run lint"
+    "test": "npm run prettier:check && npm run typecheck && npm run lint",
+    "release": "npm test && npm run build && npm version patch && yarn npm publish && git push"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.7",
