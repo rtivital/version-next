@@ -2,7 +2,7 @@
   "name": "version-next",
   "description": "Get next semantic version",
   "packageManager": "yarn@4.0.0",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "author": "Vitaly Rtishchev <rtivital@gmail.com>",
   "engines": {
